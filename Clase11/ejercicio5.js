@@ -8,8 +8,15 @@ Si el número inicial es mayor que el final, el programa debe mostrar un mensaje
 
  const prompt = require('prompt-sync')();
 
- let numeroinicio = parseFloat(prompt(' Dame un numero entero: '));
- let numerofin = parseFloat (prompt(' Dame otro numero entero: '));
+ let numeroInicio = parseFloat(prompt(' Dame un numero entero inicio: '));
+ let numeroFin = parseFloat (prompt(' Dame otro numero entero fin : '));
 
- // pensando como resolver
+
+ for (let num=numeroInicio;num <=numeroFin ;num +=numeroInicio){
+    console.log ( num );
+ };
+
+ if  (numeroInicio>numeroFin){
+    console.log ('los valores son invalidos');
+ };
 
