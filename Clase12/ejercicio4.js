@@ -16,12 +16,8 @@ let NotasEstudent=[];
 const cuantosEstudiantes= 10;
 
 
-for (let E =0; E < cuantosEstudiantes ;E++){
-    let notasIngresada = parseFloat (prompt (` Ingresa la nota del estudiante ${E  + 1}: `));
-
-  NotasEstudent [E]
-
- 
+for (let i =0; i < cuantosEstudiantes ;i++){
+     NotasEstudent[i] = parseFloat (prompt (` Ingresa la nota del estudiante ${i  + 1}: `)); 
 }
 
 console.log (" Notas de los estudiantes:  ",NotasEstudent);
