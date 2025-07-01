@@ -96,6 +96,8 @@ function CreateMainMenu () {
 switch (option){
     case"1":
     CreateBooksMenu();
+    case"2":
+    CreateUserMenu();
     
     }
 }
@@ -107,7 +109,7 @@ switch (option){
     console.log(" 3 Ordenar Libros");
     console.log(" 4 Borrar Libros");
     console.log(" 5 Salir");
-
+      
     const option = prompt(' Selecciona una opcion:  ');
     switch (option){
         case "1":
@@ -147,6 +149,17 @@ switch (option){
             let UserName = prompt ( ' Nombre de Usuario: ');
             let UserLastname = prompt ( ' Apellido de Usuario: ');
             let UserAge = prompt (' edad de usuario: ');
+            let UserMail = prompt (' E-mail del Usuario: ')
+            let NewUser= {
+            UserId: UserId,
+            UserName:UserName,
+            UserLastname:UserLastname,
+            UserAge:UserAge,   
+            UserMail:UserMail,
+             
+         }
+
+         Users.push(NewUser);
              
 
     }
