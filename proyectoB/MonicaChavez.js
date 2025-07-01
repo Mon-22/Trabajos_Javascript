@@ -71,7 +71,7 @@ let Users =  [];
 let Lends = [];
 let Reports= [];
 
-// functions block
+// special functions block
 
 function DataNormalize(Books){
     return Books
@@ -79,6 +79,10 @@ function DataNormalize(Books){
       .replace(/\s+/g, ' ')
       .toUpperCase()
   }
+
+function ClearConsole(){
+   console.clear(); // investigue como efectuar esta limpieza 
+}
 
 
 // block of menu functions 
@@ -93,11 +97,19 @@ function CreateMainMenu () {
     console.log(" 5 Salir");
 
     const option = prompt(' Selecciona una opcion:  ');
+    ClearConsole();
 switch (option){
     case"1":
     CreateBooksMenu();
     case"2":
     CreateUserMenu();
+    case"3":
+    CreateLendsMenu();
+    case"4":
+    CreateReportsMenu();
+    case"5":
+    console.log (' Saliendo del sistema ...');
+    break;   
     
     }
 }
@@ -111,6 +123,7 @@ switch (option){
     console.log(" 5 Salir");
       
     const option = prompt(' Selecciona una opcion:  ');
+    ClearConsole();
     switch (option){
         case "1":
         let promptId = parseInt(prompt(' '));
@@ -130,11 +143,13 @@ switch (option){
             disponible:promptAvailable 
          }
 
-         Books.push(PromptBook);     
+         Books.push(PromptBook); 
+      
     }
 }
 
   function CreateUserMenu () {
+    
     console.log("**** USUARIOA ****");
     console.log(" 1 Registrar usuario  ");
     console.log(" 2 Mostrar todos los usuarios ");
@@ -143,6 +158,8 @@ switch (option){
     console.log(" 5 Salir "); 
 
     const option = prompt (' Selecciona una opcion:  ');
+    ClearConsole();
+   
     switch (option) {
         case "1":
             let UserId = parseInt (prompt(' ID de usuario: '));
@@ -158,8 +175,35 @@ switch (option){
             UserMail:UserMail,
              
          }
+              Users.push(NewUser);
+             
 
-         Users.push(NewUser);
+   function CreateLendsMenu (){
+    console.log("**** PRESTAMOS ****");
+    console.log('1 Prestar libro ');
+    console.log('2 Devolver libro ');
+    console.log('3 Reportes de prestamos');
+    const option = prompt (' Selecciona una opcion:  ');
+    ClearConsole();
+     
+
+  }
+
+  function CreateReportsMenu () {
+    console.log("**** REPORTES ****");
+    console.log('1 Total de libros ');
+    console.log('2 Cantidad de libros prestados');
+    console.log('3 Cantidad de libros por genero ');
+    console.log('4 Libro mas antiguo y mas nuevo');
+    console.log('5 promedio de anios de publicacion de libros ');
+    console.log('6 Anio de publicacion mas frecuente ');
+    console.log('7 Diferencia de anios entre libros mas antiguo y el mas nuevo');
+    const option = prompt (' Selecciona una opcion:  ');
+    ClearConsole(); 
+
+  }
+         
+    
              
 
     }
