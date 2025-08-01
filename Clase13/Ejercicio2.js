@@ -15,7 +15,7 @@ const encontrarMayor = function (a,b){
 
 
 let a = parseFloat(prompt(' Dame un numero: '));
-let b = parseFloat(prompt(' Dame otro numero: '));
+let b = parseFloat(prompt(' Dame otro numero: '));  
 
 let resultado = encontrarMayor(a,b);
 console.log( 'el numero mayor es:  ' + resultado);

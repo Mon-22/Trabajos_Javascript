@@ -6,6 +6,7 @@ parámetros: la base y la altura de un triángulo. La función debe devolver el
 Pista: Usa la fórmula:
 */
 
+// funcion declarada
 const prompt= require('prompt-sync')();
 
 function calcularAreaTriangulo (b,a) {
