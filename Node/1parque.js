@@ -13,7 +13,7 @@ let name=prompt (' Cual es tu nombre? ');
 let age=parseInt(prompt( 'Que edad tienes?'   ));
 
 function checkAge(age){
-    if (age < 12 && age > 60){
+    if (age > 12 && age < 60){
         console.log ('si puede entrar al aprque ');
     } else {
 
